@@ -153,3 +153,5 @@ This project is licensed under the MIT License. See the [LICENSE]() file for det
 ## Acknowledgements
 
 * Thanks to [Deepgram](https://deepgram.com/) and [Cloudinary](https://cloudinary.com/) for providing resources and tools.
+
+### Backend API: https://audio-transcriber-zkvx.onrender.com

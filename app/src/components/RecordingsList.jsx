@@ -120,44 +120,6 @@ const RecordingsList = () => {
         </div>
       ))}
     </div>
-    // <div>
-    //   <h2>Recordings List</h2>
-    //   <Recorder onUpload={fetchRecordings} /> {/* Pass fetchRecordings function as prop */}
-    //   {recordings.map(recording => (
-    //     <div key={recording._id} style={{ marginBottom: '20px' }}>
-    //       <h3>{recording.title}</h3>
-    //       <audio controls>
-    //         <source src={recording.audioUrl} type="audio/webm" />
-    //         Your browser does not support the audio element.
-    //       </audio>
-    //       <div>
-    //         {showTranscriptionFor === recording._id && recording.transcription ? (
-    //           <div>
-    //             <p><strong>Transcription:</strong> {recording.transcription}</p>
-    //             <button onClick={() => handleHideTranscription(recording._id)}>Hide Transcription</button>
-    //           </div>
-    //         ) : (
-    //           <>
-    //             {transcribing === recording._id ? (
-    //               <p>Transcribing...</p>
-    //             ) : (
-    //               <button 
-    //                 onClick={() => handleTranscription(recording._id)}
-    //                 disabled={transcribing === recording._id}
-    //               >
-    //                 Get Transcription
-    //               </button>
-    //             )}
-    //             {transcriptionErrors[recording._id] && (
-    //               <p style={{ color: 'red' }}>{transcriptionErrors[recording._id]}</p>
-    //             )}
-    //           </>
-    //         )}
-    //       </div>
-    //       <button onClick={() => handleDelete(recording._id)}>Delete</button>
-    //     </div>
-    //   ))}
-    // </div>
   );
 };
 

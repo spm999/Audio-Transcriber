@@ -66,7 +66,7 @@ const Recorder = ({ onUpload }) => {
       setTitle('');
       setAudioBlob(null);
 
-      // Notify parent component (if provided) to fetch updated recordings
+      // Notify parent component to fetch updated recordings
       if (onUpload) {
         onUpload();
       }

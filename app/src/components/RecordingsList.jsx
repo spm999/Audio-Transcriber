@@ -14,7 +14,7 @@ const RecordingsList = () => {
 
   const fetchRecordings = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/recordings');
+      const response = await axios.get('https://audio-transcriber-zkvx.onrender.com/api/recordings');
       setRecordings(response.data.recordings);
     } catch (error) {
       console.error('Fetch recordings failed:', error);
@@ -24,7 +24,7 @@ const RecordingsList = () => {
   const handleTranscription = async (recordingId) => {
     setTranscribing(recordingId); // Set the transcribing state to the current recording ID
     try {
-      const response = await axios.post(`http://localhost:5000/api/transcription/${recordingId}`);
+      const response = await axios.post(`https://audio-transcriber-zkvx.onrender.com/api/transcription/${recordingId}`);
       if (response.data.error) {
         console.error('Transcription request failed:', response.data.error);
         setTranscriptionErrors(prevErrors => ({
@@ -66,7 +66,7 @@ const RecordingsList = () => {
 
   const handleDelete = async (recordingId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/recordings/${recordingId}`);
+      await axios.delete(`https://audio-transcriber-zkvx.onrender.com/api/recordings/${recordingId}`);
       // Remove the deleted recording from the state
       setRecordings(recordings.filter(recording => recording._id !== recordingId));
     } catch (error) {

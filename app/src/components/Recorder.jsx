@@ -55,7 +55,7 @@ const Recorder = ({ onUpload }) => {
       formData.append('title', title);
       formData.append('audio', audioBlob, 'recording.mp3');
 
-      const response = await axios.post('http://localhost:5000/api/recordings/upload', formData, {
+      const response = await axios.post('https://audio-transcriber-zkvx.onrender.com/api/recordings/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
